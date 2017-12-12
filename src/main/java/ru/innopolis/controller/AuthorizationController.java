@@ -23,6 +23,7 @@ public class AuthorizationController {
 
     @RequestMapping(value = "/authorization", method = RequestMethod.POST)
     protected String doPost(@RequestParam String login, @RequestParam String password, HttpSession session, Model model) {
+        System.out.println("Hi");
 
         AuthorizationUserService authorizationUserService = new AuthorizationUserServiceImpl();
         try {
